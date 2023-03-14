@@ -6,7 +6,7 @@ function getComputerChoice(){
 }
 
 playerChoice = prompt("Enter your choice :");
-computerChoice = getComputerChoice();
+computerChoice = plays[getComputerChoice()];
 
 function playRound (playerChoice , computerChoice){
     playerChoice = playerChoice.toUpperCase();
