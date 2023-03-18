@@ -43,7 +43,9 @@ function calcScore(string) {
 
 function game() {
     for(let i = 0 ; i<5 ; i++){
-        calcScore(playRound());
+        let message = playRound();
+        alert(message);
+        calcScore(message);
     }
 
     if(scoreP>scoreC) alert("You Won!");
@@ -51,3 +53,4 @@ function game() {
     else alert("Game Tied!");
 }
 
+game();
