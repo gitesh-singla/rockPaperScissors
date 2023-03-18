@@ -1,28 +1,31 @@
 let playerChoice , computerChoice;
-let plays = ["rock" , "paper" , "scissors"];
+let plays = ["Rock" , "Paper" , "Scissors"];
 
 function getComputerChoice(){
     return Math.floor(Math.random() * plays.length);
 }
 
-playerChoice = prompt("Enter your choice :");
+playerChoice = prompt("Enter your choice :" , "rock/paper/scissors");
 computerChoice = plays[getComputerChoice()];
 
 function playRound (playerChoice , computerChoice){
-    playerChoice = playerChoice.toUpperCase();
-    computerChoice  = computerChoice.toUpperCase();
+    let playerChoice1 = playerChoice.toUpperCase();
+    let computerChoice1  = computerChoice.toUpperCase();
 
-    if(playerChoice == computerChoice){
-        console.log("Round Tied!");
+    if(playerChoice1 == computerChoice1){
+        return `Tied! ${playerChoice} neutralised ${computerChoice}`;
     }
-    else if(playerChoice == "ROCK"){
-        computerChoice == "SCISSORS" ? console.log("Round Win!") : console.log("Round Lost!");
+    else if(playerChoice1 == "ROCK"){
+        if(computerChoice1 == "SCISSORS") return `Won! ${playerChoice} beats ${computerChoice}`;
+        else return `Lost! ${playerChoice} lost to ${computerChoice}`;
     }
-    else if(playerChoice == "PAPER"){
-        computerChoice == "ROCK" ? console.log("Round Win!") : console.log("Round Lost!");
+    else if(playerChoice1 == "PAPER"){
+        if(computerChoice1 == "ROCK") return `Won! ${playerChoice} beats ${computerChoice}`;
+        else return `Lost! ${playerChoice} lost to ${computerChoice}`;
     }
     else {
-        computerChoice == "PAPER" ? console.log("Round Win!") : console.log("Round Lost!");
+        if(computerChoice1 == "PAPER") return `Won! ${playerChoice} beats ${computerChoice}`;
+        else return `Lost! ${playerChoice} lost to ${computerChoice}`;
     }
 }
 
