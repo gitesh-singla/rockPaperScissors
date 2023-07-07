@@ -1,4 +1,4 @@
 # rockPaperScissors
-Rock Paper Scissor Project - The Odin Project
+Rock Paper Scissor Project
 
 Live Preview : https://gitesh-singla.github.io/rockPaperScissors/
